@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    margin: 200px 100px 0px 100px;
+}
+
+p {
+    margin: 0px 125px 15px 125px;
+}
+
+button {
+    background-color:rgb(rgb(104, 69, 121)) ;
+}
+
+section[data-state="hidden"] {
+    display: none;
+  }
