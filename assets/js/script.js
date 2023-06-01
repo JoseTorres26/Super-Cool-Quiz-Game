@@ -56,6 +56,12 @@ wrongAnswer.forEach(function(button) {
   });
   });
 
+  correctAnswer.forEach(function(button) {
+    button.addEventListener('click', function() {
+      const currentButton = button;
+      nextQ(currentButton)
+    });
+  });
 function start() {
 timer.textContent = timeCount;
   startTimer()
@@ -83,6 +89,25 @@ function startTimer() {
     localStorage.setItem("score", score);
 
   }
+
+  function submitName() {
+    const nameInput = document.getElementById('name');
+    const name = nameInput.value;
+    const score = localStorage.getItem('score');
+  
+    let scores = JSON.parse(localStorage.getItem('scores')) || [];
+
+    // Add the new score to the scores array
+    scores.push({ name, score });
+  
+    // Save the updated scores array in localStorage
+    localStorage.setItem('scores', JSON.stringify(scores));
+  
+  }
+  
+  
+  const submitButton = document.getElementById('submit');
+  submitButton.addEventListener('click', submitName);
 
   function showResults() {
     const hide = document.querySelectorAll('.page')
