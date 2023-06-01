@@ -2,6 +2,7 @@ const button = document.querySelectorAll('.button');
 const startButton = document.getElementById('start')
 const page = document.querySelectorAll('.page');
 const timer = document.getElementById('timer');
+endButton = document.querySelectorAll('.final')
 let timeCount = 60;
 let time;
 
@@ -26,6 +27,13 @@ startButton.addEventListener('click', function() {
   start();
 });
 
+endButton.forEach(function(button) {
+button.addEventListener('click', function() {
+  endTimer();
+  showResults();
+});
+});
+
 function start() {
 timer.textContent = timeCount;
   startTimer()
@@ -40,9 +48,16 @@ function startTimer() {
       clearInterval(time);
         showResults();
       }
+
     }, 1000);
   };
 
+  function endTimer() {
+    clearInterval(time);
+    // Store the remaining time in a variable or perform any desired action with it
+    const remainingTime = timeCount;
+    console.log('Remaining time:', remainingTime);
+  }
   function showResults() {
     const hide = document.querySelectorAll('.page')
     hide.forEach(section => {
