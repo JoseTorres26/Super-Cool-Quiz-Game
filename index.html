@@ -13,14 +13,14 @@
         <button>scores!</button>
         </a>
         <div>Super cool quiz game!</div>
-        <div class="timer">60</div>
+        <div id="timer" class="timer">60</div>
     </header>
     <main>
-        <section id="intro" data-state="visible">
+        <section class="page" id="intro" data-state="visible">
             <h2>Welcome to the super cool quiz game! this quick little quiz is made to challenge your knowledge on javascript! timer starts at 60 seconds, each wrong answer takes away 10 seconds.</h2>
-            <button class="button" data-target="intro firstQuestion">start!</button>
+            <button id="start" class="button" data-target="intro firstQuestion">start!</button>
         </section>
-        <section id="firstQuestion" data-state="hidden">
+        <section class="page" id="firstQuestion" data-state="hidden">
             <h1>Arrays can be used to store what.</h1>
             <button class="button" data-target="firstQuestion secondQuestion">strings</button>
             <button class="button" data-target="firstQuestion secondQuestion">numbers</button>
@@ -28,28 +28,28 @@
             <button class="button" data-target="firstQuestion secondQuestion" >all of them</button>
         </section>
 
-        <section id="secondQuestion" data-state="hidden">
+        <section class="page" id="secondQuestion" data-state="hidden">
             <h1>strings can be inside which of the following.</h1>
             <button class="button" data-target="secondQuestion thirdQuestion">single quote</button>
             <button class="button" data-target="secondQuestion thirdQuestion">double quote</button>
             <button class="button" data-target="secondQuestion thirdQuestion">backticks</button>
             <button class="button" data-target="secondQuestion thirdQuestion">all of them</button>
         </section>
-        <section id="thirdQuestion" data-state="hidden">
+        <section class="page" id="thirdQuestion" data-state="hidden">
             <h1>which of these is a condtional statement.</h1>
             <button class="button" data-target="thirdQuestion fourthQuestion">ifElse</button>
             <button class="button" data-target="thirdQuestion fourthQuestion">forLoop</button>
             <button class="button" data-target="thirdQuestion fourthQuestion">addEventListener</button>
             <button class="button" data-target="thirdQuestion fourthQuestion">functions</button>
         </section>
-        <section id="fourthQuestion" data-state="hidden">
+        <section class="page" id="fourthQuestion" data-state="hidden">
             <h1>what is the worst datatype.</h1>
             <button class="button" data-target="fourthQuestion fifthQuestion">strings</button>
             <button class="button" data-target="fourthQuestion fifthQuestion">numbers</button>
             <button class="button" data-target="fourthQuestion fifthQuestion">alerts</button>
             <button class="button" data-target="fourthQuestion fifthQuestion">boolean</button>
         </section>
-        <section id="fifthQuestion" data-state="hidden">
+        <section class="page" id="fifthQuestion" data-state="hidden">
             <h1>which is used for the backend development.</h1>
            
                 <button class="button" data-target="results fifthQuestion">HTML</button>

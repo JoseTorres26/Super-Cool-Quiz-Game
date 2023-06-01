@@ -1,7 +1,9 @@
 const button = document.querySelectorAll('.button');
-const results = document.getElementById('results');
-const restart = document.getElementById('restart');
-timer = document.querySelector('.timer');
+const startButton = document.getElementById('start')
+const page = document.querySelectorAll('.page');
+const timer = document.getElementById('timer');
+let timeCount = 60;
+let time;
 
 button.forEach(function(button) {
  button.addEventListener('click', function() {
@@ -20,19 +22,33 @@ button.forEach(function(button) {
  });
 });
 
+startButton.addEventListener('click', function() {
+  start();
+});
+
 function start() {
-
-
-  timer()
+timer.textContent = timeCount;
+  startTimer()
 }
 
-timer() {
+function startTimer() {
   time = setInterval(function() {
     timeCount--;
-    timer.textcontent = timeCount
+    timer.textContent = timeCount;
 
-    if (timeCount >= 0) { 
-      
-    }
-  })
-}
+    if (timeCount <= 0) { 
+      clearInterval(time);
+        showResults();
+      }
+    }, 1000);
+  };
+
+  function showResults() {
+    const hide = document.querySelectorAll('.page')
+    hide.forEach(section => {
+      section.setAttribute('data-state', 'hidden');
+    });
+
+    const results = document.getElementById('results');
+    results.setAttribute('data-state', 'visible');
+  }
