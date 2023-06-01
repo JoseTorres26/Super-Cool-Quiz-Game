@@ -1,6 +1,7 @@
 const button = document.querySelectorAll('.button');
 const results = document.getElementById('results');
 const restart = document.getElementById('restart');
+timer = document.querySelector('.timer');
 
 button.forEach(function(button) {
  button.addEventListener('click', function() {
@@ -19,5 +20,19 @@ button.forEach(function(button) {
  });
 });
 
+function start() {
 
 
+  timer()
+}
+
+timer() {
+  time = setInterval(function() {
+    timeCount--;
+    timer.textcontent = timeCount
+
+    if (timeCount >= 0) { 
+      
+    }
+  })
+}

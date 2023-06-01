@@ -9,13 +9,16 @@
 </head>
 <body>
     <header>
+        <a href="./pages/results.html">
         <button>scores!</button>
+        </a>
         <div>Super cool quiz game!</div>
+        <div class="timer">60</div>
     </header>
     <main>
-        <section>
+        <section id="intro" data-state="visible">
             <h2>Welcome to the super cool quiz game! this quick little quiz is made to challenge your knowledge on javascript! timer starts at 60 seconds, each wrong answer takes away 10 seconds.</h2>
-            <button class="button" data-target="firstQuestion">start!</button>
+            <button class="button" data-target="intro firstQuestion">start!</button>
         </section>
         <section id="firstQuestion" data-state="hidden">
             <h1>Arrays can be used to store what.</h1>
@@ -48,14 +51,20 @@
         </section>
         <section id="fifthQuestion" data-state="hidden">
             <h1>which is used for the backend development.</h1>
-            <a href="./pages/results.html">
-                <button class="button" id="results">HTML</button>
-                <button class="button" id="results">CSS</button>
-                <button class="button" id="results">JavaScript</button>
-                <button class="button" id="results">None of these</button>
-            </a>
-            
+           
+                <button class="button" data-target="results fifthQuestion">HTML</button>
+                <button class="button" data-target="results fifthQuestion">CSS</button>
+                <button class="button" data-target="results fifthQuestion">JavaScript</button>
+                <button class="button" data-target="results fifthQuestion">None of these</button>
         </section>
+        <section id="results" data-state="hidden">
+            <h1>score! </h1>
+            <a href="./pages/results.html">
+            <button>highscores</button>
+            </a>
+            <button id="restart">restart</button>
+        </section>
+        
     </main>
     <script src="./assets/js/script.js"></script>
 </body>
