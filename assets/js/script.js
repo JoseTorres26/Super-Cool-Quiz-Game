@@ -8,6 +8,7 @@ const correctAnswer = document.querySelectorAll('.correct');
 let timeCount = 60;
 let time;
 
+
 function toggle(sectionId, isVisible) {
   const section = document.getElementById(sectionId);
   section.setAttribute('data-state', isVisible ? 'visible' : 'hidden');
@@ -87,6 +88,7 @@ function startTimer() {
     // Store the remaining time in a variable or perform any desired action with it
     const score = timeCount;
     localStorage.setItem("score", score);
+    displayFinalScore(score)
 
   }
 
@@ -103,6 +105,10 @@ function startTimer() {
     // Save the updated scores array in localStorage
     localStorage.setItem('scores', JSON.stringify(scores));
   
+  }
+  function displayFinalScore(score) {
+    const finalScore = document.getElementById('finalScore');
+finalScore.textContent += score;
   }
   
   

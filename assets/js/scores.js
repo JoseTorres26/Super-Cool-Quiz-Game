@@ -15,4 +15,7 @@ function displayScores() {
     });
   }
 
+  function goBack() {
+    history.back();
+  }
   displayScores();

@@ -30,17 +30,17 @@
 
         <section class="page" id="secondQuestion" data-state="hidden">
             <h1>strings can be inside which of the following.</h1>
-            <button class="wrong button" class="button" data-target="thirdQuestion">single quote</button>
-            <button class="wrong button" class="button" data-target="thirdQuestion">double quote</button>
-            <button class="wrong button" class="button" data-target="thirdQuestion">backticks</button>
-            <button class="correct button" class="button" data-target="thirdQuestion">all of them</button>
+            <button class="wrong button"  data-target="thirdQuestion">single quote</button>
+            <button class="wrong button"  data-target="thirdQuestion">double quote</button>
+            <button class="wrong button"  data-target="thirdQuestion">backticks</button>
+            <button class="correct button"  data-target="thirdQuestion">all of them</button>
         </section>
         <section class="page" id="thirdQuestion" data-state="hidden">
             <h1>which of these is a conditional statement.</h1>
-            <button class="correct button" class="button" data-target="fourthQuestion">ifElse</button>
-            <button class="wrong button" class="button" data-target="fourthQuestion">forLoop</button>
-            <button class="wrong button" class="button" data-target="fourthQuestion">addEventListener</button>
-            <button class="wrong button" class="button" data-target="fourthQuestion">functions</button>
+            <button class="correct button" data-target="fourthQuestion">ifElse</button>
+            <button class="wrong button"  data-target="fourthQuestion">forLoop</button>
+            <button class="wrong button"  data-target="fourthQuestion">addEventListener</button>
+            <button class="wrong button"  data-target="fourthQuestion">functions</button>
         </section>
         <section class="page" id="fourthQuestion" data-state="hidden">
             <h1>what is the worst datatype.</h1>
@@ -58,14 +58,17 @@
                 <button class="wrong final button"   data-target="results">None of these</button>
         </section>
         <section id="results" data-state="hidden">
-            <h1>score!</h1>
+            <h1 id="finalScore">score!</h1>
 
             <input id="name" type="text" placeholder="Enter name">
             <button id="submit">submit</button>
             <a href="./pages/results.html">
             <button>highscores</button>
             </a>
-            <button id="restart">restart</button>
+            <a href="./index.html">
+                <button id="restart">restart</button>
+            </a>
+            
         </section>
         
     </main>
